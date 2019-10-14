@@ -33,9 +33,11 @@ plt.style.use('seaborn')
 
 #Changes in the number of crimes at different times of the day
 plt.xticks(range(0,24))
+plt.title('Changes in the number of crimes at different times of the day')
 df.groupby(['hour']).size().plot(kind="line",figsize=(12,6))
 
 #Changes in the number of crimes at different day of the week
+plt.title('Changes in the number of crimes at different day of the week')
 df.groupby(['day_of_week']).size().plot(kind="line",figsize=(12,6))
 
 labels = list(df['BORO_NM'].unique())
